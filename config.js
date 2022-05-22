@@ -9,9 +9,9 @@ global.sgh = process.env.LINK_GITHUB
 global.sgc = process.env.LINK_GROUP
 global.ownernumber = process.env.NOWNER
 global.owner = [
-  ['6282287750102'],
-  ['6282287750102'],
-  [`${process.env.NOWNER}`, `${process.env.NAMAOWNER}`, true]
+  ['0'],
+  ['0'],
+  [`6282287750102`, true]
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [`${process.env.MODERATOR}`] // Want some help?
