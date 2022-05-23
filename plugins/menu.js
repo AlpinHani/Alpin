@@ -28,27 +28,34 @@ let tags = {
   'info': '𝐈𝐧𝐟𝐨'
 }
 const defaultMenu = {
-  before: `╭━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙
-│ 「 %me 」
-│ 𝐓𝐞𝐫𝐢𝐦𝐚𝐤𝐚𝐬𝐢𝐡 𝐒𝐮𝐝𝐚𝐡
-│ 𝐌𝐞𝐧𝐠𝐠𝐮𝐧𝐚𝐤𝐚𝐧 𝐁𝐨𝐭 𝐢𝐧𝐢
-│ 𝐒𝐞𝐦𝐨𝐠𝐚 𝐡𝐚𝐫𝐢𝐦𝐮 𝐦𝐞𝐧𝐲𝐞𝐧𝐚𝐧𝐠𝐤𝐚𝐧
-╰┬────────────┈ ⳹
-┌┤◦➛ 𝐍𝐚𝐦𝐚: %name!
-││◦➛ 𝐋𝐢𝐦𝐢𝐭: %limit Limit
-││◦➛ 𝐖𝐚𝐤𝐭𝐮: %time
-││◦➛ 𝐓𝐨𝐭𝐚𝐥 𝐗𝐩: %totalexp
-││◦➛ 𝐑𝐨𝐥𝐞: %role
-│╰────────────┈ ⳹
-│ 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞: %rtotalreg of %totalreg
-├────────────────
-│ 𝐔𝐩𝐭𝐢𝐦𝐞: %uptime (%muptime)
-╰━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙
-
-`.trimStart(),
-  header: '╭━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙\n│ 「 %category 」\n╰┬────────────┈ ⳹\n┌┤ #JanganDispam',
-  body: '││◦➛ %cmd %islimit %isPremium',
-  footer: '│╰────────────┈ ⳹\n│ 𝐓𝐚𝐧𝐠𝐠𝐚𝐥: %week, %date \n╰━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙',
+before:`
+┅━━━━━═┅═❏ *DASHBOARD* ❏═┅═━━━━━┅
+  
+❏═┅═━–〈 *T O D A Y*
+┆☂︎ *Days:* %week %weton
+┆☂︎ *Date:* %date
+┆☂︎ *Islamic Date:* %dateIslamic
+┆☂︎ *Time:* %time
+┆☂︎ *Runtime:* %uptime (%muptime)
+┗––––––––––✦
+❏═┅═━–〈 *I N F O*
+┆☂︎ Name: %name
+┆☂︎ Status: --
+┆☂︎ Limit: %limit
+┆☂︎ Money: %money
+┆☂︎ Exp: %totalexp
+┆☂︎ Level: %level
+┆☂︎ Role: %role
+┗––––––––––✦
+❏═┅═━–〈 *B U A T U S E R*
+┆ 𝐓𝐞𝐫𝐢𝐦𝐚𝐤𝐚𝐬𝐢𝐡 𝐒𝐮𝐝𝐚𝐡
+┆ 𝐌𝐞𝐧𝐠𝐠𝐮𝐧𝐚𝐤𝐚𝐧 𝐁𝐨𝐭 𝐢𝐧𝐢
+┆ 𝐒𝐞𝐦𝐨𝐠𝐚 𝐡𝐚𝐫𝐢𝐦𝐮 𝐦𝐞𝐧𝐲𝐞𝐧𝐚𝐧𝐠𝐤𝐚𝐧
+┗––––––––––✦
+%readmore`.trimStart(), 
+ header:   '⃝▣──「 %category 」───⬣',
+ body: '┆✦ %cmd %isPremium %islimit',
+ footer: '▣───────────⬣\n',
   after: ``,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
@@ -148,8 +155,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './src/avatar_contact.png')
-    const cloudbot = 'https://telegra.ph/file/baea4ead668adebdc5073.jpg'
-    conn.sendHydrated(m.chat, text.trim(), author, cloudbot, 'https://github.com/itsmedell', '𝐆𝐢𝐭𝐡𝐮𝐛', '+62 812 248 630 98', '𝐍𝐮𝐦𝐛𝐞𝐫 𝐎𝐰𝐧𝐞𝐫', [
+    const cloudbot = 'https://telegra.ph/file/13dcc442f4cda22eaf5e8.jpg'
+    conn.sendHydrated(m.chat, text.trim(), author, cloudbot, 'https://instagram.com/en4y.pin', '𝐅𝐨𝐥𝐥𝐨𝐰', '+62 822 8775 0102', '𝐍𝐮𝐦𝐛𝐞𝐫 𝐎𝐰𝐧𝐞𝐫', [
       ['𝐃𝐨𝐧𝐚𝐭𝐞', '/donasi'],
       ['𝐒𝐩𝐞𝐞𝐝', '/ping'],
       ['𝐂𝐫𝐞𝐚𝐭𝐨𝐫', '/owner']
