@@ -4,14 +4,16 @@ import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 
+global.donasi = process.env.DONASI
+global.thumbmenu = process.env.THUMB_MENU
 global.sig = process.env.LINK_IG
 global.sgh = process.env.LINK_GITHUB
 global.sgc = process.env.LINK_GROUP
 global.ownernumber = process.env.NOWNER
 global.owner = [
-  ['0'],
-  ['0'],
-  [`6282287750102`, true]
+  ['6282287750102'],
+  ['6282287750102'],
+  [`${6282287750102}`, `${process.env.NAMAOWNER}`, true]
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [`${process.env.MODERATOR}`] // Want some help?
