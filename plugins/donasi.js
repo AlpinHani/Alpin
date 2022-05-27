@@ -1,10 +1,13 @@
 let handler =  m => m.reply(`
 ╭─「 Donasi 」
-│ • https://saweria.co/itsmedell
+│ • Dana [082287750102]
+│ • Ovo [082287750102]
+│ • Gopay [082287750102]
+│ • Pulsa [082287750102]
 ╰────
 `.trim()) // Tambah sendiri kalo mau
 handler.help = ['donasi']
 handler.tags = ['info']
-handler.command = /^dona(te|si)$/i
+handler.command = /^sewa|dona(te|si)$/i
 
 export default handler
