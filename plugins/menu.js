@@ -155,7 +155,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './src/avatar_contact.png')
-    const cloudbot = 'https://telegra.ph/file/13dcc442f4cda22eaf5e8.jpg'
+    const cloudbot = 'https://telegra.ph/file/3332fee47550a916bbdb6.jpg'
     conn.sendHydrated(m.chat, text.trim(), author, cloudbot, 'https://instagram.com/en4y.pin', '𝐅𝐨𝐥𝐥𝐨𝐰', '+62 822 8775 0102', '𝐍𝐮𝐦𝐛𝐞𝐫 𝐎𝐰𝐧𝐞𝐫', [
       ['𝐃𝐨𝐧𝐚𝐭𝐞', '/donasi'],
       ['𝐒𝐩𝐞𝐞𝐝', '/ping'],
